@@ -143,110 +143,25 @@ $B.event({$:'.new_page_btn', on:'click'}, function(){
 });
 ```
 
+새 화면을 생성하는 기능이 완성되었습니다.
 
+4. 이전 화면으로 돌아가는 기능 만들기
+다음 코드를 JS파일 내부에 추가합니다.
 
+```
+// EVENT LISTENER BY BIM
+$B.event({$:'.back-previous', on:'click'}, function(){
 
-
-
-
-
-
-
-
-ㅁㄴㅇㄻㄴㅇㅎㅁㄴㅇㅎㅁㄴㅇㅎ하면 새화면 생김
-
-many things, for example html which be poped in your browser create dynamically 
-by ./js/ex_1.js
-
-
-
-it called from ex_1.html
-
-lets change something for example_1 plugin
-
-* there is bim syntax. u dosent need to know bim syntax yet.
-* just see how to change plugin
-
-- in your aditor, open ex_1.js
-
-* our gole is make a button in plugin
-* to add new column in app page
-
-
-
-* first make btn in main page.
-* in ./templates/sortable.html
-add this button tag
-
-  <div class="align_center">
-    <button class="new_col_btn col button button-large button-fill">
-      Add New Column
-    </button>
-  </div>
-
-
-* and then make eventlistener in js
-go to ex_1.js
-add this js function
-
-$B.event({$:'.new_col_btn', on:'click'}, function(){
-
-  console.log('this button is working')
+  // mainView is object from framework7
+  mainView.router.back({animatePages:true});
+  console.log('back')
 
 });
+```
 
-and click button.
-that button will be work
+이미지를 클릭하면 이전 화면으로 돌아가는 기능이 추가되었습니다.
 
-
-* we wanna make 
-when i click this btn,
-new column is poped in this page.
-
-change eventlistener like this
-
-var list_num = 6;
-
-$B.event({$:'.new_col_btn', on:'click'}, function(){
-
-  console.log('this button is working')
-
-  let random_num = Math.floor(20 * Math.random());
-  list_num = list_num + 1;
-
-  let append_li = '<li>' +
-    '  <div class="item-content">' +
-    // ion-ionic can be used in hitbim
-    '    <div class="item-media"><i class="icon ion-gear-a"></i></div>' +
-    '    <div class="item-inner">' +
-    `      <div class="item-title"> List item ${list_num} english</div>` +
-    `      <div class="item-after"> $${random_num} </div>` +
-    '    </div>' +
-    '  </div>' +
-    '  <div class="sortable-handler"></div>' +
-    '</li>';
-
-  $B.append({$:'#list_ul'}, append_li);
-
-});
-
-it will be work.
-
-
-
-* and then lets make new page in plugin
-
-* lets make new button and eventlistener for that btn
-
-
-
-
-
-
-
-
-
-5. 
+### end
 
 this whole node.js app can be real app for ios, android at once
 
@@ -257,6 +172,3 @@ actuary this plugin dosent have many features yet.
 but if many useful plugins are combined as one app, this app will be GOOOOOOOD
 
 hitbim appbuilder work like this.
-
-
-
