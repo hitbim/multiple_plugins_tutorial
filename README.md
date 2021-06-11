@@ -19,13 +19,12 @@
 
 ## 플러그인을 브라우저에서 확인하는 방법
 
-앱 실행 후 플러그인을 브라우저 상에서 확인하려면 url로 이동하세요.
-
+플러그인은 앱 실행 후 다음 url에서 확인할 수 있습니다.
 "http://localhost:3000/plugins/example_1/ex_1.html"
 
 ## 플러그인 소스 경로
 
-example_plugins\public\PLUGINS\ "plugin name"
+example_plugins/public/PLUGINS/example_1
 
 ## 플러그인 수정 가이드
 
@@ -33,7 +32,9 @@ example_plugins\public\PLUGINS\ "plugin name"
 
 ### 새 컬럼 생성 버튼 만들기
 
-1. 새로운 버튼을 만듭니다.
+1. 먼저 새로운 버튼을 만듭니다.
+example_plugins/public/PLUGINS/example_1/templates/sortable.html 
+파일 내부에 다음 코드를 추가합니다.
 
 ``` 
 <div class="align_center">
@@ -41,10 +42,52 @@ example_plugins\public\PLUGINS\ "plugin name"
         Add New Column
     </button>
 </div>
-  ```
+```
 
+2. 버튼을 작동하게 하기 위해 이벤트 리스너를 생성합니다.
+example_plugins/public/PLUGINS/example_1/js/ex_1.js
+파일 내부에 다음 코드를 추가합니다.
 
+```
+$B.event({$:'.new_col_btn', on:'click'}, function(){
 
+  console.log('this button is working')
+
+});
+
+```
+
+브라우저 상에서 버튼을 누를 때 마다 로그를 확인할 수 있습니다.
+
+3. 위 함수에 기능을 추가합니다.
+추가한 코드를 다음과 같이 수정합니다.
+
+```
+var list_num = 6;
+
+$B.event({$:'.new_col_btn', on:'click'}, function(){
+
+  console.log('this button is working')
+
+  let random_num = Math.floor(20 * Math.random());
+  list_num = list_num + 1;
+
+  let append_li = '<li>' +
+    '  <div class="item-content">' +
+    // ion-ionic can be used in hitbim
+    '    <div class="item-media"><i class="icon ion-gear-a"></i></div>' +
+    '    <div class="item-inner">' +
+    `      <div class="item-title"> List item ${list_num} english</div>` +
+    `      <div class="item-after"> $${random_num} </div>` +
+    '    </div>' +
+    '  </div>' +
+    '  <div class="sortable-handler"></div>' +
+    '</li>';
+
+  $B.append({$:'#list_ul'}, append_li);
+
+});
+```
 
 
 
