@@ -34,7 +34,7 @@ example_plugins/public/PLUGINS/example_1
 
 1. 먼저 새로운 버튼을 만듭니다.  
 example_plugins/public/PLUGINS/example_1/templates/sortable.html  
-파일 내 </bim> 위에 다음 코드를 추가합니다.
+파일 내 </bim> 위에 다음 코드를 추가하여 버튼이 출력되게 합니다.
 
 ``` 
 <div class="align_center">
@@ -58,7 +58,7 @@ $B.event({$:'.new_col_btn', on:'click'}, function(){
 브라우저 상에서 버튼을 누를 때 마다 로그를 확인할 수 있습니다.
 
 3. 이벤트 리스너 콜백함수에 기능 추가  
-코드를 다음과 같이 수정합니다.
+방금 추가한 이벤트 리스너를 다음과 같이 수정합니다.
 ```
 var list_num = 6;
 
@@ -87,7 +87,7 @@ $B.event({$:'.new_col_btn', on:'click'}, function(){
 
 1. 먼저 새로운 버튼을 만듭니다.  
 example_plugins/public/PLUGINS/example_1/templates/sortable.html  
-파일 내부에 다음 코드를 추가합니다.
+파일 내 </bim> 위에 다음 코드를 추가하여 버튼이 출력되게 합니다.
 
 ``` 
 <div class="align_center">
@@ -99,7 +99,7 @@ example_plugins/public/PLUGINS/example_1/templates/sortable.html
 
 2. 위 버튼과 대응되는 이벤트 리스너를 생성합니다.  
 example_plugins/public/PLUGINS/example_1/js/ex_1.js  
-파일 내부에 다음 코드를 추가합니다.
+파일 내 맨 아래에 다음 코드를 추가합니다.
 
 ```
 // Event Listener For HITBIM APP
@@ -108,8 +108,8 @@ $B.event({$:'.new_page_btn', on:'click'}, function(){
 });
 ```
 
-3. 이벤트 리스너 콜백함수에 기능을 추가  
-위 코드를 다음과 같이 수정합니다.
+3. 이벤트 리스너 콜백함수에 기능 추가  
+이벤트 리스너를 다음과 같이 수정하여 새 화면 생성 기능을 추가합니다.
 ```
 $B.event({$:'.new_page_btn', on:'click'}, function(){
     // SETTING FOR NEW INTERNAL PAGE
@@ -134,7 +134,7 @@ $B.event({$:'.new_page_btn', on:'click'}, function(){
 새 화면을 생성하는 기능이 완성되었습니다.
 
 4. 이전 화면으로 돌아가는 기능 만들기  
-다음 코드를 JS파일 내부에 추가합니다.
+다음 코드를 JS파일 맨 아래에 추가합니다.
 ```
 // EVENT LISTENER BY BIM
 $B.event({$:'.back-previous', on:'click'}, function(){
@@ -144,7 +144,7 @@ $B.event({$:'.back-previous', on:'click'}, function(){
 });
 ```
 
-이미지를 클릭하면 이전 화면으로 돌아가는 기능이 추가되었습니다.
+새 페이지 안의 이미지를 클릭하면 이전 화면으로 돌아가는 기능이 추가되었습니다.
 
 ### END
 
