@@ -25,7 +25,10 @@ example_plugins\public\PLUGINS\ "plugin name"
 
 4. how to change plugin
 
-many things, for example html which be poped in your browser create dynamically by plugin\js\ "js file"
+many things, for example html which be poped in your browser create dynamically 
+by ./js/ex_1.js
+
+it called from ex_1.html
 
 lets change something for example_1 plugin
 
@@ -39,8 +42,78 @@ lets change something for example_1 plugin
 
 
 
+* first make btn in main page.
+* in ./templates/sortable.html
+add this button tag
 
-DOING SOMETHINGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+  <div class="align_center">
+    <button class="new_col_btn col button button-large button-fill">
+      Add New Column
+    </button>
+  </div>
+
+
+* and then make eventlistener in js
+go to ex_1.js
+add this js function
+
+$B.event({$:'.new_col_btn', on:'click'}, function(){
+
+  console.log('this button is working')
+
+});
+
+and click button.
+that button will be work
+
+
+* we wanna make 
+when i click this btn,
+new column is poped in this page.
+
+change eventlistener like this
+
+var list_num = 6;
+
+$B.event({$:'.new_col_btn', on:'click'}, function(){
+
+  console.log('this button is working')
+
+  let random_num = Math.floor(20 * Math.random());
+  list_num = list_num + 1;
+
+  let append_li = '<li>' +
+    '  <div class="item-content">' +
+    // ion-ionic can be used in hitbim
+    '    <div class="item-media"><i class="icon ion-gear-a"></i></div>' +
+    '    <div class="item-inner">' +
+    `      <div class="item-title"> List item ${list_num} english</div>` +
+    `      <div class="item-after"> $${random_num} </div>` +
+    '    </div>' +
+    '  </div>' +
+    '  <div class="sortable-handler"></div>' +
+    '</li>';
+
+  $B.append({$:'#list_ul'}, append_li);
+
+});
+
+it will be work.
+
+
+
+* and then lets make new page in plugin
+
+* lets make new button and eventlistener for that btn
+
+
+
+
+
+
+
+
+
 
 
 

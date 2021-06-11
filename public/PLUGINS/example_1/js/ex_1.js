@@ -35,36 +35,3 @@ $B.init({
   app.alert('Hello World!');
 
 })
-
-// EVENT LISTENER BY BIM
-// when user click ".icon", activate callback function
-$B.event({$:'.icon', on:'click'}, function(){
-
-  // SETTING FOR NEW INTERNAL PAGE
-  var page = {
-    page:{
-      name: 'new',
-      context: {
-        lang: 'lang/newpage-en',
-        detect: false
-      },
-      content: 'templates/new.html',
-      animate: true
-    },
-  };
-
-  // BIM.APP.PAGE make new page in this plugin and callback
-  bim.app.page(page, function(){
-    console.log('New page is poped')
-  });
-
-});
-
-// EVENT LISTENER BY BIM
-$B.event({$:'.back-previous', on:'click'}, function(){
-
-  // mainView is object from framework7
-  mainView.router.back({animatePages:true});
-  console.log('back')
-
-});

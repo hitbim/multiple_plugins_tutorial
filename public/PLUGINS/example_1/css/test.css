@@ -6,3 +6,8 @@ i.icon{
 .back-previous{
   cursor: pointer;
 }
+.align_center{
+  display: table; 
+  margin-left: auto; 
+  margin-right: auto;
+}
