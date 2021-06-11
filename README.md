@@ -51,11 +51,8 @@ example_plugins/public/PLUGINS/example_1/js/ex_1.js
 ```
 // Event Listener For HITBIM APP
 $B.event({$:'.new_col_btn', on:'click'}, function(){
-
   console.log('make new colomn button is working')
-
 });
-
 ```
 
 브라우저 상에서 버튼을 누를 때 마다 로그를 확인할 수 있습니다.
@@ -66,10 +63,8 @@ $B.event({$:'.new_col_btn', on:'click'}, function(){
 var list_num = 6;
 
 $B.event({$:'.new_col_btn', on:'click'}, function(){
-
   let random_num = Math.floor(20 * Math.random());
   list_num = list_num + 1;
-
   let append_li = '<li>' +
     '  <div class="item-content">' +
     // ion-ionic can be used in hitbim
@@ -81,7 +76,6 @@ $B.event({$:'.new_col_btn', on:'click'}, function(){
     '  </div>' +
     '  <div class="sortable-handler"></div>' +
     '</li>';
-
     // this is append function for HITBIM APP
   $B.append({$:'#list_ul'}, append_li);
 });
@@ -109,11 +103,8 @@ example_plugins/public/PLUGINS/example_1/js/ex_1.js
 
 ```
 // Event Listener For HITBIM APP
-
 $B.event({$:'.new_page_btn', on:'click'}, function(){
-
   console.log('make new page button is working')
-
 });
 ```
 
@@ -121,7 +112,6 @@ $B.event({$:'.new_page_btn', on:'click'}, function(){
 
 ```
 $B.event({$:'.new_page_btn', on:'click'}, function(){
-
     // SETTING FOR NEW INTERNAL PAGE
     var page = {
       page:{
@@ -134,12 +124,10 @@ $B.event({$:'.new_page_btn', on:'click'}, function(){
         animate: true
       },
     };
-
     // BIM.APP.PAGE make new page in this plugin and callback
     bim.app.page(page, function(){
       console.log('New page is poped')
     });
-    
 });
 ```
 
@@ -151,17 +139,15 @@ $B.event({$:'.new_page_btn', on:'click'}, function(){
 ```
 // EVENT LISTENER BY BIM
 $B.event({$:'.back-previous', on:'click'}, function(){
-
   // mainView is object from framework7
   mainView.router.back({animatePages:true});
   console.log('back')
-
 });
 ```
 
 이미지를 클릭하면 이전 화면으로 돌아가는 기능이 추가되었습니다.
 
-### end
+### END
 
 this whole node.js app can be real app for ios, android at once
 
