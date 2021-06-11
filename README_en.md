@@ -1,16 +1,15 @@
-# HITBIM 플러그인
-
 NEED node.js package
 
 
-1. 앱 실행 방법
-: Node.js
+1. start this app
 
-$ git clone "https://github.com/hitbim/example_plugins.git"
+$ git clone https://github.com/hitbim/example_plugins.git
 
-$ npm install
+or download form git
 
-$ npm start
+and $ npm install
+
+    $ npm start
 
 need node.js
 
