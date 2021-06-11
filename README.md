@@ -49,6 +49,7 @@ example_plugins/public/PLUGINS/example_1/js/ex_1.js
 파일 내부에 다음 코드를 추가합니다.
 
 ```
+// Event Listener For HITBIM APP
 $B.event({$:'.new_col_btn', on:'click'}, function(){
 
   console.log('this button is working')
@@ -67,8 +68,6 @@ var list_num = 6;
 
 $B.event({$:'.new_col_btn', on:'click'}, function(){
 
-  console.log('this button is working')
-
   let random_num = Math.floor(20 * Math.random());
   list_num = list_num + 1;
 
@@ -84,12 +83,16 @@ $B.event({$:'.new_col_btn', on:'click'}, function(){
     '  <div class="sortable-handler"></div>' +
     '</li>';
 
+    // this is append function for HITBIM APP
   $B.append({$:'#list_ul'}, append_li);
-
 });
 ```
 
+새 컬럼을 생성하는 기능이 완성되었습니다.
 
+### 플러그인 내부에 새 화면 만들기
+
+ㅁㄴㅇㄻㄴㅇㅎㅁㄴㅇㅎㅁㄴㅇㅎ하면 새화면 생김
 
 many things, for example html which be poped in your browser create dynamically 
 by ./js/ex_1.js
