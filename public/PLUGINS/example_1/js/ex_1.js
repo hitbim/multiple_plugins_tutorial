@@ -1,3 +1,4 @@
+// CALL PLUGIN INFORMATION FROM HITBIM SERVER
 $B.init({
   name: 'NewsFeed',
   load: 'template_engine',
@@ -8,7 +9,8 @@ $B.init({
 })
 
 .then(()=>{
-
+  
+  // SET FIRST PAGE OF THIS PLUGIN
   bim.app.template({
 	  id: bim.plugin.id.get(),
 		html: 'templates/sortable.html',
@@ -20,83 +22,46 @@ $B.init({
 	})
 	.then(function(compiled){
 
+    // ERROR HENDLER
     if(compiled.error) return app.alert(compiled.message);
+    // APPEND HTML CONTENTS TO PAGE
     $B.append({$:'.app-content'}, compiled.template);
-    console.log('compiled template ', compiled);
 
+    // APP IS OBJECT FROM FRAMEWORK7
     app.sortableOpen('.sortable');
-
-    /*
-      NoSQL similar interface
-    */
-
-    let params = {
-      query:[
-        {
-          // This statement insert new row if not exists:
-          // 'INSERT | UPDATE'
-          // This statement select data
-          query: 'SELECT',
-          table: 'myFirstPluginDb',
-          // limit: 10 OR Object params
-          limit: {
-            start: 0,
-            limit: 40
-          },
-          pluginId: bim.plugin.id.get()
-        },
-        {
-          query: 'SELECT',
-          table: 'myFirstPluginDb',
-          where: {
-            uid: 'uid-f3f34f34f'
-          },
-          pluginId: bim.plugin.id.get()
-        },
-        {
-          query: 'SELECT FILTER',
-          table: 'myFirstPluginDb',
-          filter: {
-            values: ['uid-324f523432','uid-3453425f3','uid-923b2k3732'],
-            in: 'uid'
-          },
-          order: {
-            sort: 'date'
-          },
-          pluginId: bim.plugin.id.get()
-        },
-      ],
-      env: 'dev',
-      crossPlugin: true
-    }
-
-    bim.db.query(params, function(res){
-
-      console.log('response ', res);
-    })
-
-    $B.event({$:'.icon', on:'click'}, function(){
-      // CREATE A NEW INTERNAL PAGE
-      var page = {
-  			page:{
-  				name: 'new',
-  				context: {
-  					lang: 'lang/newpage-en',
-  					detect: false
-  				},
-  				content: 'templates/new.html',
-  				animate: true
-  			},
-  		};
-
-  		bim.app.page(page, function(compiled){
-
-        $B.event({$:'.back-previous', on:'click'}, function(){
-        	mainView.router.back({animatePages:true});
-        });
-      });
-    });
   });
 
   app.alert('Hello World!');
 })
+
+// EVENTLISTENER BY BIM
+// it mean if i click ".icon", activate callback function
+$B.event({$:'.icon', on:'click'}, function(){
+
+  // CREATE A NEW INTERNAL PAGE
+  var page = {
+    page:{
+      name: 'new',
+      context: {
+        lang: 'lang/newpage-en',
+        detect: false
+      },
+      content: 'templates/new.html',
+      animate: true
+    },
+  };
+
+  // bim.app.page make new page in this plugin and callback
+  bim.app.page(page, function(){
+    console.log('New page is poped')
+  });
+  
+});
+
+$B.event({$:'.back-previous', on:'click'}, function(){
+
+  // mainView is OBJECT FROM FRAMEWORK7
+  mainView.router.back({animatePages:true});
+  console.log('back')
+
+});

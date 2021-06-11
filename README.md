@@ -29,6 +29,14 @@ many things, for example html which be poped in your browser create dynamically 
 
 lets change something for example_1 plugin
 
+* there is bim syntax. u dosent need to know bim syntax yet.
+* just see how to change plugin
+
+- in your aditor, open ex_1.js
+
+
+
+
 
 
 DOING SOMETHINGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
