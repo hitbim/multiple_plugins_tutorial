@@ -14,12 +14,12 @@
 
 ### node 패키지 설치 및 앱 실행
 
-`$ npm install`
+`$ npm install`  
 `$ npm start`
 
 ## 플러그인을 브라우저에서 확인하는 방법
 
-플러그인은 앱 실행 후 다음 url에서 확인할 수 있습니다.
+플러그인은 앱 실행 후 다음 url에서 확인할 수 있습니다.  
 "http://localhost:3000/plugins/example_1/ex_1.html"
 
 ## 플러그인 소스 경로
@@ -33,7 +33,7 @@ example_plugins/public/PLUGINS/example_1
 ### 새 컬럼 생성 버튼 만들기
 
 1. 먼저 새로운 버튼을 만듭니다.
-example_plugins/public/PLUGINS/example_1/templates/sortable.html 
+- example_plugins/public/PLUGINS/example_1/templates/sortable.html  
 파일 내부에 다음 코드를 추가합니다.
 
 ``` 
@@ -45,7 +45,7 @@ example_plugins/public/PLUGINS/example_1/templates/sortable.html
 ```
 
 2. 위 버튼과 대응되는 이벤트 리스너를 생성합니다.
-example_plugins/public/PLUGINS/example_1/js/ex_1.js
+- example_plugins/public/PLUGINS/example_1/js/ex_1.js  
 파일 내부에 다음 코드를 추가합니다.
 
 ```
@@ -57,8 +57,8 @@ $B.event({$:'.new_col_btn', on:'click'}, function(){
 
 브라우저 상에서 버튼을 누를 때 마다 로그를 확인할 수 있습니다.
 
-3. 이벤트 리스너의 콜백함수에 기능을 추가하기 위해 코드를 다음과 같이 수정합니다.
-
+3. 이벤트 리스너 콜백함수에 기능 추가
+- 코드를 다음과 같이 수정합니다.
 ```
 var list_num = 6;
 
@@ -86,7 +86,7 @@ $B.event({$:'.new_col_btn', on:'click'}, function(){
 ### 플러그인 내부에 새 화면 만들기
 
 1. 먼저 새로운 버튼을 만듭니다.
-example_plugins/public/PLUGINS/example_1/templates/sortable.html 
+- example_plugins/public/PLUGINS/example_1/templates/sortable.html  
 파일 내부에 다음 코드를 추가합니다.
 
 ``` 
@@ -98,7 +98,7 @@ example_plugins/public/PLUGINS/example_1/templates/sortable.html
 ```
 
 2. 위 버튼과 대응되는 이벤트 리스너를 생성합니다.
-example_plugins/public/PLUGINS/example_1/js/ex_1.js
+- example_plugins/public/PLUGINS/example_1/js/ex_1.js  
 파일 내부에 다음 코드를 추가합니다.
 
 ```
@@ -108,8 +108,8 @@ $B.event({$:'.new_page_btn', on:'click'}, function(){
 });
 ```
 
-3. 이벤트 리스너의 콜백함수에 기능을 추가하기 위해 코드를 다음과 같이 수정합니다.
-
+3. 이벤트 리스너 콜백함수에 기능을 추가
+- 위 코드를 다음과 같이 수정합니다.
 ```
 $B.event({$:'.new_page_btn', on:'click'}, function(){
     // SETTING FOR NEW INTERNAL PAGE
@@ -134,8 +134,7 @@ $B.event({$:'.new_page_btn', on:'click'}, function(){
 새 화면을 생성하는 기능이 완성되었습니다.
 
 4. 이전 화면으로 돌아가는 기능 만들기
-다음 코드를 JS파일 내부에 추가합니다.
-
+- 다음 코드를 JS파일 내부에 추가합니다.
 ```
 // EVENT LISTENER BY BIM
 $B.event({$:'.back-previous', on:'click'}, function(){
@@ -149,12 +148,8 @@ $B.event({$:'.back-previous', on:'click'}, function(){
 
 ### END
 
-this whole node.js app can be real app for ios, android at once
-
-you just work for 1 plugin. it is not hard to work.
-
-actuary this plugin dosent have many features yet.
-
-but if many useful plugins are combined as one app, this app will be GOOOOOOOD
-
+this whole node.js app can be real app for ios, android at once  
+you just work for 1 plugin. it is not hard to work.  
+actuary this plugin dosent have many features yet.  
+but if many useful plugins are combined as one app, this app will be GOOOOOOOD  
 hitbim appbuilder work like this.
