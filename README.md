@@ -1,35 +1,33 @@
 # HITBIM Plugin sample
 
-## Introduction
+## 소개
 이 문서는 HITBIM 앱을 실행하고, 플러그인을 수정하는 과정을 수행하는 것을 통해 HITBIM과 그 플러그인에 대해 이해하도록 하는 것을 목표로 합니다.
 
-## Install of this app
+## 앱의 설치와 실행
 
-### Requirements
+### 요구사항
 
 `Node.js` 가 설치되어 있어야 합니다.
 
-### Install sample app from git
+### 앱 설치
 `$ git clone https://github.com/hitbim/example_plugins.git `
 
-### Install package and start node.js app
+### node 패키지 설치 및 앱 실행
+
 `$ npm install`
 `$ npm start`
 
+## 플러그인을 브라우저에서 확인하는 방법
 
+Node.js 앱을 실행한 뒤 플러그인을 확인하려면 다음 주소로 이동하세요.
 
+"http://localhost:3000/plugins/example_1/ex_1.html"
 
-2. how to see activating plugin example
-
-after start this node.js app, it will be working in your port:3000
-
-in your browser go to "http://localhost:3000/plugins/example_1/ex_1.html"
-
-3. where is plugin files
+## 플러그인 소스 경로
 
 example_plugins\public\PLUGINS\ "plugin name"
 
-4. how to change plugin
+## 플러그인 수정 방법
 
 many things, for example html which be poped in your browser create dynamically 
 by ./js/ex_1.js
