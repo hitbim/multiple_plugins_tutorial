@@ -22,23 +22,25 @@ $B.init({
 	})
 	.then(function(compiled){
 
-    // ERROR HENDLER
+    // ERROR HANDLER
     if(compiled.error) return app.alert(compiled.message);
     // APPEND HTML CONTENTS TO PAGE
     $B.append({$:'.app-content'}, compiled.template);
 
-    // APP IS OBJECT FROM FRAMEWORK7
+    // app is object from framework7
     app.sortableOpen('.sortable');
+
   });
 
   app.alert('Hello World!');
+
 })
 
-// EVENTLISTENER BY BIM
-// it mean if i click ".icon", activate callback function
+// EVENT LISTENER BY BIM
+// when user click ".icon", activate callback function
 $B.event({$:'.icon', on:'click'}, function(){
 
-  // CREATE A NEW INTERNAL PAGE
+  // SETTING FOR NEW INTERNAL PAGE
   var page = {
     page:{
       name: 'new',
@@ -51,16 +53,17 @@ $B.event({$:'.icon', on:'click'}, function(){
     },
   };
 
-  // bim.app.page make new page in this plugin and callback
+  // BIM.APP.PAGE make new page in this plugin and callback
   bim.app.page(page, function(){
     console.log('New page is poped')
   });
-  
+
 });
 
+// EVENT LISTENER BY BIM
 $B.event({$:'.back-previous', on:'click'}, function(){
 
-  // mainView is OBJECT FROM FRAMEWORK7
+  // mainView is object from framework7
   mainView.router.back({animatePages:true});
   console.log('back')
 

@@ -34,7 +34,8 @@ lets change something for example_1 plugin
 
 - in your aditor, open ex_1.js
 
-
+* our gole is make a button in plugin
+* to add new column in app page
 
 
 
