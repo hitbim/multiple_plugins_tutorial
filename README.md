@@ -44,7 +44,7 @@ example_plugins/public/PLUGINS/example_1/templates/sortable.html
 </div>
 ```
 
-2. 버튼을 작동하게 하기 위해 이벤트 리스너를 생성합니다.
+2. 위 버튼과 대응되는 이벤트 리스너를 생성합니다.
 example_plugins/public/PLUGINS/example_1/js/ex_1.js
 파일 내부에 다음 코드를 추가합니다.
 
@@ -52,7 +52,7 @@ example_plugins/public/PLUGINS/example_1/js/ex_1.js
 // Event Listener For HITBIM APP
 $B.event({$:'.new_col_btn', on:'click'}, function(){
 
-  console.log('this button is working')
+  console.log('make new colomn button is working')
 
 });
 
@@ -60,8 +60,7 @@ $B.event({$:'.new_col_btn', on:'click'}, function(){
 
 브라우저 상에서 버튼을 누를 때 마다 로그를 확인할 수 있습니다.
 
-3. 위 함수에 기능을 추가합니다.
-추가한 코드를 다음과 같이 수정합니다.
+3. 이벤트 리스너의 콜백함수에 기능을 추가하기 위해 코드를 다음과 같이 수정합니다.
 
 ```
 var list_num = 6;
@@ -91,6 +90,68 @@ $B.event({$:'.new_col_btn', on:'click'}, function(){
 새 컬럼을 생성하는 기능이 완성되었습니다.
 
 ### 플러그인 내부에 새 화면 만들기
+
+1. 먼저 새로운 버튼을 만듭니다.
+example_plugins/public/PLUGINS/example_1/templates/sortable.html 
+파일 내부에 다음 코드를 추가합니다.
+
+``` 
+<div class="align_center">
+<button class="new_page_btn col button button-large button-fill">
+    Go To New Page
+</button>
+</div>
+```
+
+2. 위 버튼과 대응되는 이벤트 리스너를 생성합니다.
+example_plugins/public/PLUGINS/example_1/js/ex_1.js
+파일 내부에 다음 코드를 추가합니다.
+
+```
+// Event Listener For HITBIM APP
+
+$B.event({$:'.new_page_btn', on:'click'}, function(){
+
+  console.log('make new page button is working')
+
+});
+```
+
+3. 이벤트 리스너의 콜백함수에 기능을 추가하기 위해 코드를 다음과 같이 수정합니다.
+
+```
+$B.event({$:'.new_page_btn', on:'click'}, function(){
+
+    // SETTING FOR NEW INTERNAL PAGE
+    var page = {
+      page:{
+        name: 'new',
+        context: {
+          lang: 'lang/newpage-en',
+          detect: false
+        },
+        content: 'templates/new.html',
+        animate: true
+      },
+    };
+
+    // BIM.APP.PAGE make new page in this plugin and callback
+    bim.app.page(page, function(){
+      console.log('New page is poped')
+    });
+    
+});
+```
+
+
+
+
+
+
+
+
+
+
 
 ㅁㄴㅇㄻㄴㅇㅎㅁㄴㅇㅎㅁㄴㅇㅎ하면 새화면 생김
 
