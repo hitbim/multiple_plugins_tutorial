@@ -34,7 +34,7 @@ example_plugins/public/PLUGINS/example_1
 
 1. 먼저 새로운 버튼을 만듭니다.  
 example_plugins/public/PLUGINS/example_1/templates/sortable.html  
-파일 내부에 다음 코드를 추가합니다.
+파일 내 </bim> 위에 다음 코드를 추가합니다.
 
 ``` 
 <div class="align_center">
@@ -46,7 +46,7 @@ example_plugins/public/PLUGINS/example_1/templates/sortable.html
 
 2. 위 버튼과 대응되는 이벤트 리스너를 생성합니다.  
 example_plugins/public/PLUGINS/example_1/js/ex_1.js  
-파일 내부에 다음 코드를 추가합니다.
+파일 내 맨 아래에 다음 코드를 추가합니다.
 
 ```
 // Event Listener For HITBIM APP
