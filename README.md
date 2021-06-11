@@ -19,7 +19,7 @@
 
 ## 플러그인을 브라우저에서 확인하는 방법
 
-Node.js 앱을 실행한 뒤 플러그인을 확인하려면 다음 주소로 이동하세요.
+앱 실행 후 플러그인을 브라우저 상에서 확인하려면 url로 이동하세요.
 
 "http://localhost:3000/plugins/example_1/ex_1.html"
 
@@ -27,10 +27,31 @@ Node.js 앱을 실행한 뒤 플러그인을 확인하려면 다음 주소로 �
 
 example_plugins\public\PLUGINS\ "plugin name"
 
-## 플러그인 수정 방법
+## 플러그인 수정 가이드
+
+이 가이드는 주어진 플러그인에 새로운 두 가지 기능을 추가하는 것을 목표로 합니다.
+
+### 새 컬럼 생성 버튼 만들기
+
+1. 새로운 버튼을 만듭니다.
+
+``` 
+<div class="align_center">
+    <button class="new_col_btn col button button-large button-fill">
+        Add New Column
+    </button>
+</div>
+  ```
+
+
+
+
+
 
 many things, for example html which be poped in your browser create dynamically 
 by ./js/ex_1.js
+
+
 
 it called from ex_1.html
 
@@ -118,13 +139,6 @@ it will be work.
 
 
 
-
-
-
-example_1 plugin is changed.
-
-
-
 5. 
 
 this whole node.js app can be real app for ios, android at once
@@ -139,25 +153,3 @@ hitbim appbuilder work like this.
 
 
 
-
-
-
-
-이 node.js 앱을 설치 후, 실행한 뒤
-
-http://localhost:3000/plugins/example_1/ex_1.html
-
-경로로 들어가면 example_1 플러그인이 확인이 댐
-
-
-
-
-
-this git repository contain
-- example of plugin
-
-- basic syntax of bim
-
-- structor of hitbim app
-
-- this one app will be work as app in IOS, Android
