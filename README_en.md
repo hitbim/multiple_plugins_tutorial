@@ -150,10 +150,15 @@ $B.event({$:'.back-previous', on:'click'}, function(){
 
 feature to send last page is added in our plugin.
 
+## Make new Plugin
+
+There is Plugin Development Kit in  
+example_plugins/public/PLUGINS/Plugin_Base  
+Any JS developer can make their own Plugin by this  
+  
+Path to cheak developing plugin in your browser  
+"http://localhost:3000/plugins/Plugin_Base/Plugin_Base.html"
+
 ### END
 
-this whole node.js app can be real app for ios, android at once  
-you just work for 1 plugin. it is not hard to work.  
-actuary this plugin dosent have many features yet.  
-but if many useful plugins are combined as one app, this app will be GOOOOOOOD  
-hitbim appbuilder work like this.
+This Plugins can be IOS, APK APP automatically by Hitbim composer later
