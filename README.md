@@ -154,4 +154,4 @@ example_plugins/public/PLUGINS/Plugin_Base
 
 ### 마침
 
-이렇게 개발된 플러그인들은 추후 제공될 Hitbim 컴포저를 통해 안드로이드, IOS 앱으로 변환이 될 수 있습니다.  
+이렇게 개발된 플러그인들은 추후 제공될 Hitbim 컴포저를 통해 자동으로 안드로이드, IOS 앱으로 전환될 수 있습니다.  
