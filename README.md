@@ -146,10 +146,13 @@ $B.event({$:'.back-previous', on:'click'}, function(){
 
 새 페이지 안의 이미지를 클릭하면 이전 화면으로 돌아가는 기능이 추가되었습니다.
 
-### END
+## 새 플러그인 생성
 
-this whole node.js app can be real app for ios, android at once  
-you just work for 1 plugin. it is not hard to work.  
-actuary this plugin dosent have many features yet.  
-but if many useful plugins are combined as one app, this app will be GOOOOOOOD  
-hitbim appbuilder work like this.
+1. 다음 경로에 개발자용 플러그인 베이스가 존재합니다.  
+example_plugins/public/PLUGINS/Plugin_Base  
+Hitbim 개발자용 서비스를 통해 개발을 시작할 시, 기본 구성요소를 포함한 SDK가 제공되며,  
+DB 생성,연동이나 플러그인 구동을 위한 서버 생성까지 쉽게 할 수 있습니다.  
+
+### 마침
+
+이렇게 개발된 플러그인들은 추후 제공될 Hitbim 컴포저를 통해 안드로이드, IOS 앱으로 변환이 될 수 있습니다.  
