@@ -152,7 +152,7 @@ $B.event({$:'.back-previous', on:'click'}, function(){
 example_plugins/public/PLUGINS/Plugin_Base  
 이를 이용해 원하는 플러그인을 개발할 수 있습니다.  
 
-2. 개발중인 플러그인을 브라우저에서 확인하는 경로
+2. 개발중인 플러그인을 브라우저에서 확인하는 경로  
 "http://localhost:3000/plugins/Plugin_Base/Plugin_Base.html"
 
 ## 마침
