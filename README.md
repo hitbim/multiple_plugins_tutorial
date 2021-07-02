@@ -149,7 +149,9 @@ $B.event({$:'.back-previous', on:'click'}, function(){
 ## 새 플러그인 생성
 
 1. 다음 경로에 개발자용 플러그인 베이스가 존재합니다.  
-example_plugins/public/PLUGINS/Plugin_Base    
+example_plugins/public/PLUGINS/Plugin_Base  
+이를 이용해 원하는 플러그인을 개발할 수 있습니다.  
+  
 Hitbim 개발자용 서비스를 통해 개발을 시작할 시, 기본 구성요소를 포함한 SDK가 제공되며,  
 DB 생성,연동이나 플러그인 구동을 위한 서버 생성까지 쉽게 할 수 있습니다.  
 
