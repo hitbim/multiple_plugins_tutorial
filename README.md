@@ -152,6 +152,9 @@ $B.event({$:'.back-previous', on:'click'}, function(){
 example_plugins/public/PLUGINS/Plugin_Base  
 이를 이용해 원하는 플러그인을 개발할 수 있습니다.  
 
-### 마침
+2. 개발중인 플러그인을 브라우저에서 확인하는 경로
+"http://localhost:3000/plugins/Plugin_Base/Plugin_Base.html"
+
+## 마침
 
 이렇게 개발된 플러그인들은 추후 제공될 Hitbim 컴포저를 통해 자동으로 안드로이드, IOS 앱으로 전환될 수 있습니다.  
