@@ -24,7 +24,7 @@
 
 ## 플러그인 소스 경로
 
-example_plugins/public/PLUGINS/example_1
+`example_plugins/public/PLUGINS/example_1`
 
 ## 플러그인 수정 가이드
 
@@ -149,7 +149,7 @@ $B.event({$:'.back-previous', on:'click'}, function(){
 ## 새 플러그인 생성
 
 1. 다음 경로에 개발자용 플러그인 베이스가 존재합니다.  
-example_plugins/public/PLUGINS/Plugin_Base  
+`example_plugins/public/PLUGINS/Plugin_Base`  
 이를 이용해 원하는 플러그인을 개발할 수 있습니다.  
 
 2. 개발중인 플러그인을 브라우저에서 확인하는 경로  
