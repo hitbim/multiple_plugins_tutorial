@@ -24,7 +24,7 @@ after run node app, you can check Example plugin in below url
 
 ## Plugun soruce path
 
-example_plugins/public/PLUGINS/example_1  
+`example_plugins/public/PLUGINS/example_1`  
 there can be many plugins in PLUGINS folder.
 
 ## Guide to add two feature in Example plugin
@@ -153,7 +153,7 @@ feature to send last page is added in our plugin.
 ## Make new Plugin
 
 There is Plugin Development Kit in  
-example_plugins/public/PLUGINS/Plugin_Base  
+`example_plugins/public/PLUGINS/Plugin_Base`  
 Any JS developer can make their own Plugin by this  
   
 Path to cheak developing plugin in your browser  
