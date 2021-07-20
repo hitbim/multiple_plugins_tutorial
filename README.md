@@ -26,9 +26,11 @@ Let's start by cloning this repository to your local folder:
 `$ git clone https://github.com/hitbim/multiple_plugins_tutorial.git`
 
 Then, install the required libraries:
+
 `$ npm install`
 
 Now, you can start the app:
+
 `$ npm start`
 
 ### Add a new plugin
