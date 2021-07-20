@@ -42,11 +42,13 @@ $B.init({
     name: 'Plugin_Base',
     load: 'template_engine',
     device: true,
-    token: '//////// DATA FOR HITBIM_SERVER, NOT NESSARY FOR LOCAL ////////',
-    pluginId: '//////// DATA FOR HITBIM_SERVER, NOT NESSARY FOR LOCAL ////////',
+    token: '//////// TOKEN ////////',
+    pluginId: '//////// PLUGIN ID ////////',
     framework: 'framework7'
 })
 ```
+You can obtain the token and pluginId necessary for your plugin from the https://hitbim.com/plugins-dashboard when you register the plugin. From the dashboard, you can configure your plugin to make REST API calls and manage the database.
+
 In addition, there is a code to set the template HTML of the plugin.
 ```javascript=
 bim.app.template({
