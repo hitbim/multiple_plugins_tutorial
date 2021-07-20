@@ -22,6 +22,7 @@ We'll create the simple plugin which shows the current time and connect it to ou
 Before starting, you should have NodeJS installed on your system.
 
 Let's start by cloning this repository to your local folder:
+
 `$ git clone https://github.com/hitbim/multiple_plugins_tutorial.git`
 
 Then, install the required libraries:
