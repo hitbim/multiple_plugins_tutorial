@@ -1,11 +1,11 @@
 
 
 ### Contents:
-1. [Introduction]()
-2. [Get started]()
-3. [Add a new plugin]()
-4. [Connect plugins together]()
-5. [Test your app]()
+1. [Introduction](https://github.com/hitbim/multiple_plugins_tutorial/blob/main/README.md#introduction)
+2. [Get started](https://github.com/hitbim/multiple_plugins_tutorial#get-started)
+3. [Add a new plugin](https://github.com/hitbim/multiple_plugins_tutorial#add-a-new-plugin)
+4. [Connect plugins together](https://github.com/hitbim/multiple_plugins_tutorial#connect-plugins-together)
+5. [Test your app](https://github.com/hitbim/multiple_plugins_tutorial#test-your-app)
 
 
 
